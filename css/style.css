@@ -1,0 +1,124 @@
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    background-color: rgb(46, 36, 36);
+}
+
+.slider_section {
+    width: 1000px;
+    height: 400px;
+    background-color: rgb(17, 15, 46);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+}
+
+.slider_line {
+    height: 80%;
+    width: 100%;
+    /* background-color: blue; */
+    display: flex;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider_pic {
+    height: 320px;
+    width: 500px;
+    position: absolute;
+    font-size: 0;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+}
+
+.btn {
+    width: 200px;
+    height: 150px;
+    border-radius: 50px;
+    font-size: 36px;
+    background-color: rgba(50, 50, 235, 0.5);
+    transition: all 0.5s;
+    position: relative;
+}
+
+.btn:hover {
+    color: #fff;
+    font-size: 42px;
+    transition: all 0.5s;
+}
+
+.btn::before {
+    content: "";
+    height: 20px;
+    width: 20px;
+    background-color: red;
+    position: absolute;
+    top: -10px;
+    left: 65px;
+    z-index: -0;
+    border-radius: 40%;
+    transition: all 0.5s;
+}
+
+.btn::after {
+    content: "";
+    height: 20px;
+    width: 20px;
+    background-color: red;
+    position: absolute;
+    bottom: -10px;
+    left: 65px;
+    z-index: 0;
+    border-radius: 40%;
+    transition: all 0.5s;
+}
+
+.filter_div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    border-radius: 50px;
+    background-color: rgba(50, 50, 235, 0.5);
+    left: 0;
+    backdrop-filter: blur(5px);
+    border: 1px solid silver;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+
+.btn:hover::before {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    box-shadow: 0px 0px 10px 10px red;
+    box-shadow: 0px 0px 20px 20px red;
+}
+
+.btn:hover::after {
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    box-shadow: 0px 0px 10px 10px red;
+    box-shadow: 0px 0px 20px 20px red;
+}
+
+@media (max-width: 1000px) {
+    body {
+        transform: scale(0.5);
+    }
+}
